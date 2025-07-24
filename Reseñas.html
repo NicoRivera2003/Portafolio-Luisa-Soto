@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reseñas - Mi Portafolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="Reseñas.css"> <style>
+        
+        .reviews-page-container {
+            max-width: 1000px;
+            margin: 50px auto;
+            padding: 40px;
+            background-color: #fff;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+            border-radius: 12px;
+            min-height: 70vh;
+            box-sizing: border-box;
+        }
+
+        .reviews-page-container .section-title {
+            text-align: center;
+            font-size: 3.2em;
+            margin-bottom: 70px;
+            color: #4A2E1D;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            position: relative;
+            display: inline-block;
+        }
+
+        .reviews-page-container .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background-color: #D2B48C;
+            border-radius: 2px;
+        }
+
+        .reviews-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Columnas responsivas */
+            gap: 40px; /* Espacio entre las reseñas */
+        }
+
+        .review-card {
+            background-color: #fbfbfb;
+            border: 1px solid #eee;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-align: left;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between; /* Empuja el footer de la tarjeta abajo */
+        }
+
+        .review-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .review-card .quote-icon {
+            font-size: 3em;
+            color: #D2B48C; /* Color del icono de comilla */
+            margin-bottom: 15px;
+            line-height: 0.5; /* Ajusta la altura de línea para que la comilla no ocupe mucho espacio */
+        }
+
+        .review-card .review-text {
+            font-size: 1.1em;
+            line-height: 1.6;
+            color: #555;
+            margin-bottom: 25px;
+            font-style: italic; /* Texto de reseña en cursiva */
+        }
+
+        .review-card .reviewer-info {
+            display: flex;
+            align-items: center;
+            margin-top: auto; /* Empuja la información del revisor al final de la tarjeta */
+            padding-top: 15px;
+            border-top: 1px solid #eee;
+        }
+
+        .review-card .reviewer-avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%; /* Para hacerla circular */
+            object-fit: cover;
+            margin-right: 15px;
+            border: 2px solid #D2B48C; /* Borde al avatar */
+        }
+
+        .review-card .reviewer-name {
+            font-weight: bold;
+            color: #4A2E1D;
+            font-size: 1.1em;
+        }
+
+        .review-card .reviewer-title {
+            font-size: 0.9em;
+            color: #777;
+        }
+
+        /*Diseño responsive*/
+        @media (max-width: 768px) {
+            .reviews-page-container {
+                padding: 20px;
+                margin: 30px auto;
+            }
+            .reviews-page-container .section-title {
+                font-size: 2.5em;
+                margin-bottom: 50px;
+            }
+            .reviews-grid {
+                grid-template-columns: 1fr; /* Una columna en móviles */
+            }
+        }
+        @media (max-width: 480px) {
+            .reviews-page-container .section-title {
+                font-size: 2em;
+            }
+            .review-card {
+                padding: 20px;
+            }
+            .review-card .quote-icon {
+                font-size: 2.5em;
+            }
+            .review-card .review-text {
+                font-size: 1em;
+            }
+            .review-card .reviewer-avatar {
+                width: 50px;
+                height: 50px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <h1>Reseñas de Clientes</h1>
+    </header>
+    <hr>
+
+    <nav class="main-nav">
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="Sobremi.html">Sobre mí</a></li>
+            <li><a href="Portafolio.html">Portafolio</a></li>
+            <li><a href="Habilidades.html">Habilidades</a></li>
+            <li><a href="Reseñas.html" class="active">Reseñas</a></li> 
+        </ul>
+    </nav>
+
+    <div class="reviews-page-container">
+        <h2 class="section-title">Lo que dice mi equipo de trabajo</h2>
+        
+        <div class="reviews-grid">
+            <div class="review-card">
+                <span class="quote-icon">“</span>
+                <p class="review-text">"Trabajar con Luisa es una experiencia excepcional. Su creatividad y atención al detalle transformaron por completo mi visión en una realidad asombrosa.
+                    Además de ser una persona con un gran sentido del humor, tiene un gran sentido de pertenencia por la compañía. ¡Totalmente recomendada!"</p>
+                <div class="reviewer-info">
+                    <img src="Reseña1.jpeg" alt="Foto de Cliente 1" class="reviewer-avatar">
+                    <div>
+                        <p class="reviewer-name">Ana Chacón</p>
+                        <p class="reviewer-title">Diseñadora de modas</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="review-card">
+                <span class="quote-icon">“</span>
+                <p class="review-text">"La profesionalidad y la pasión que Luisa pone en cada proyecto son inspiradoras. Su habilidad para entender mis necesidades y superarlas es inigualable."</p>
+                <div class="reviewer-info">
+                    <img src="Reseñas2.jpg" alt="Foto de Cliente 2" class="reviewer-avatar">
+                    <div>
+                        <p class="reviewer-name">Isabel Arbelaez</p>
+                        <p class="reviewer-title">Directora de diseño</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="review-card">
+                <span class="quote-icon">“</span>
+                <p class="review-text">"Desde el concepto inicial hasta el producto final, Luisa demostró un talento y una dedicación excepcionales. No dudaría en volver a a encargarle algo."</p>
+                <div class="reviewer-info">
+                    <img src="Reseña3.jpeg" alt="Foto de Cliente 3" class="reviewer-avatar">
+                    <div>
+                        <p class="reviewer-name">Monica Duran</p>
+                        <p class="reviewer-title">Lider de diseño</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="review-card">
+                <span class="quote-icon">“</span>
+                <p class="review-text">"Impresionada por la rapidez y la calidad del trabajo. Luisa capturó perfectamente la esencia de lo que buscaba y le dio vida. Es bueno
+                    contar con un elemento como ella en la compañía"</p>
+                <div class="reviewer-info">
+                    <img src="reseñas4.jpg" alt="Foto de Cliente 4" class="reviewer-avatar">
+                    <div>
+                        <p class="reviewer-name">Maria Adelaida Lince</p>
+                        <p class="reviewer-title">Diseñadora de modas</p>
+                    </div>
+                </div>
+            </div>
+            
+            </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Mi Portafolio. Todos los derechos reservados.</p>
+        <div class="social-icons">
+            <a href="https://www.instagram.com/luisafernandas04?igsh=cjZubTJ3cXdqMGxz" target="_blank"><i class="fab fa-instagram"></i></a>
+        </div>
+    </footer>
+
+</body>
+</html>

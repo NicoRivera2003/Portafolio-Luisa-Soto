@@ -1,0 +1,393 @@
+body {
+    background-color: burlywood;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+}
+
+.header {
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif, 'Arial Narrow', Arial, sans-serif;
+    padding: 30px 0;
+    color: #4A2E1D;
+    background-color: #f5deb3;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 3.5em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+hr {
+    border: none;
+    border-top: 3px solid #D2B48C;
+    margin: 30px auto;
+    width: 70%;
+}
+
+.main-nav {
+    background-color: #8B4513;
+    padding: 15px 0;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    margin-bottom: 40px;
+}
+
+.main-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.main-nav li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.1em;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.main-nav li a:hover,
+.main-nav li a.active {
+    background-color: #A0522D;
+    color: white;
+}
+
+.skills-section { 
+    padding: 80px 40px;
+    background-color: #f8f8f8;
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #4A2E1D;
+    margin-top: 50px;
+}
+.skills-section .section-title {
+    font-size: 2.8em;
+    margin-bottom: 50px;
+    color: #333;
+}
+.skills-container { 
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    max-width: 1000px;
+    margin: 0 auto 60px auto;
+}
+
+.skill-category {
+    background-color: #fbfbfb;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    padding: 35px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+    flex: 1 1 280px;
+    max-width: 320px;
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-category:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+.skill-category h3 {
+    color: #6C4B30;
+    font-size: 1.9em;
+    margin-top: 0;
+    margin-bottom: 25px;
+    border-bottom: 3px solid #D2B48C;
+    padding-bottom: 12px;
+    position: relative;
+}
+
+.skill-category ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.skill-category li {
+    font-size: 1.15em;
+    margin-bottom: 12px;
+    color: #555;
+    line-height: 1.5;
+    position: relative;
+    padding-left: 25px;
+}
+
+.skill-category li::before {
+    content: '✔️';
+    position: absolute;
+    left: 0;
+    color: #8B4513;
+    font-size: 0.9em;
+    top: 2px;
+}
+
+.progress-bars-container {
+    max-width: 900px;
+    margin: 80px auto 40px auto;
+    text-align: left;
+    background-color: #fbfbfb;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+.progress-bars-container h3 {
+    text-align: center;
+    font-size: 2.2em;
+    color: #4A2E1D;
+    margin-bottom: 40px;
+}
+
+.skill-progress {
+    margin-bottom: 30px;
+}
+
+.skill-progress span {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: #555;
+    font-weight: bold;
+}
+
+.skill-progress span::after {
+    content: attr(data-level); 
+    color: #8B4513;
+    font-size: 0.9em;
+}
+
+.skill-progress .bar {
+    background-color: #e0e0e0;
+    border-radius: 12px;
+    height: 22px;
+    overflow: hidden;
+    position: relative;
+}
+
+.skill-progress .level {
+    background-color: #A0522D;
+    height: 100%;
+    border-radius: 12px;
+    text-align: right;
+    color: white;
+    font-size: 1em;
+    line-height: 22px;
+    padding-right: 10px;
+    box-sizing: border-box;
+    transition: width 1.2s ease-out;
+}
+
+/*Estilos para la sección de reseñas */
+
+.reviews-page-container {
+    max-width: 1000px; /* Ancho máximo para el contenido de las reseñas */
+    margin: 50px auto; /* Centra el contenedor principal de la página de reseñas */
+    padding: 40px; /* Espacio interno */
+    background-color: #fff; /* Fondo blanco */
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15); /* Sombra */
+    border-radius: 12px; /* Esquinas redondeadas */
+    min-height: 70vh; /* Altura mínima */
+    box-sizing: border-box; /* Incluye padding y border en el tamaño del elemento */
+}
+
+.reviews-page-container .section-title { /* Título principal de la sección de reseñas */
+    text-align: center;
+    font-size: 3.2em;
+    margin-bottom: 70px;
+    color: #4A2E1D;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    position: relative;
+    display: inline-block; /* Necesario para que el elemento de subrayado funcione correctamente */
+}
+
+.reviews-page-container .section-title::after { /* Efecto de subrayado para el título de la sección */
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background-color: #D2B48C;
+    border-radius: 2px;
+}
+
+.reviews-grid { /* Contenedor para organizar las tarjetas de reseñas */
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Crea columnas responsivas */
+    gap: 40px; /* Espacio entre las tarjetas de reseñas */
+}
+
+.review-card { /* Estilo para cada tarjeta de reseña individual */
+    background-color: #fbfbfb; /* Fondo gris */
+    border: 1px solid #eee;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08); /* Sombra suave */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición para efecto al pasar el ratón */
+    text-align: left;
+    display: flex; /* Usa flex dentro de la tarjeta para organizar el contenido */
+    flex-direction: column; /* Apila los elementos verticalmente */
+    justify-content: space-between; /* Empuja el footer de la tarjeta hacia abajo si el texto es corto */
+}
+
+.review-card:hover { /* Efecto al pasar el ratón sobre la tarjeta */
+    transform: translateY(-8px); /* Eleva la tarjeta */
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15); /* Aumenta la sombra */
+}
+
+.review-card .quote-icon { /* Estilo para el ícono de comilla */
+    font-size: 3em;
+    color: #D2B48C;
+    margin-bottom: 15px;
+    line-height: 0.5; /* Ajusta para que la comilla no agregue mucho espacio vertical */
+}
+
+.review-card .review-text { /* Estilo para el texto de la reseña */
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 25px;
+    font-style: italic; /* fuente del texto */
+}
+
+.review-card .reviewer-info { /* Contenedor para la información de cada persona (imagen, nombre, título) */
+    display: flex; /* Para alinear la imagen y el texto */
+    align-items: center; /* Alineación vertical */
+    margin-top: auto; /* Empuja este elemento al final de la tarjeta */
+    padding-top: 15px;
+    border-top: 1px solid #eee; /* Línea separadora */
+}
+
+.review-card .reviewer-avatar { /* Estilo para la imagen del avatar */
+    width: 60px;
+    height: 60px;
+    border-radius: 50%; /* Hace que la imagen sea circular */
+    object-fit: cover; /* Asegura que la imagen cubra el área sin distorsionarse */
+    margin-right: 15px;
+    border: 2px solid #D2B48C; /* Borde alrededor del avatar */
+}
+
+.review-card .reviewer-name { /* Estilo para el nombre de la persona */
+    font-weight: bold;
+    color: #4A2E1D;
+    font-size: 1.1em;
+}
+
+.review-card .reviewer-title { /* Estilo para el título o cargo de la persona */
+    font-size: 0.9em;
+    color: #777;
+}
+
+/*Estilos para el footer global*/
+footer {
+    text-align: center;
+    padding: 30px;
+    background-color: #8B4513;
+    color: white;
+    font-size: 0.9em;
+    margin-top: 60px;
+    box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
+}
+
+/* Ajustes para pantallas de tablet y laptops pequeñas (Diseño responsivo) */
+@media (max-width: 992px) {
+    .reviews-page-container {
+        padding: 30px;
+    }
+    .reviews-page-container .section-title {
+        font-size: 2.8em;
+    }
+    .reviews-grid {
+        gap: 30px; /* Reduce el espacio entre tarjetas */
+    }
+}
+
+/* Para pantallas pequeñas (móviles) */
+@media (max-width: 768px) {
+    .reviews-page-container {
+        padding: 20px;
+        margin: 30px auto;
+    }
+    .reviews-page-container .section-title {
+        font-size: 2.5em;
+        margin-bottom: 50px;
+    }
+    .reviews-grid {
+        grid-template-columns: 1fr; /* Una sola columna para las reseñas en móviles */
+    }
+    .review-card {
+        padding: 25px;
+    }
+    .review-card .quote-icon {
+        font-size: 2.8em;
+    }
+    .review-card .review-text {
+        font-size: 1em;
+    }
+    .review-card .reviewer-avatar {
+        width: 50px;
+        height: 50px;
+    }
+    .main-nav ul { /* Menú vertical en móviles */
+        flex-direction: column;
+        gap: 10px;
+    }
+    .main-nav li a {
+        padding: 8px 15px;
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 480px) {
+    .reviews-page-container .section-title {
+        font-size: 2em;
+        margin-bottom: 40px;
+    }
+    .review-card {
+        padding: 20px;
+    }
+    .review-card .quote-icon {
+        font-size: 2.5em;
+    }
+    .review-card .review-text {
+        font-size: 0.95em;
+    }
+    .review-card .reviewer-avatar {
+        width: 45px;
+        height: 45px;
+    }
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.social-icons a {
+    color: black;
+    margin: 0 10px;
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #d17f47; 
+}

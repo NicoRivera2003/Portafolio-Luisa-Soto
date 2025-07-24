@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio - Portafolio Luisa Soto</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <link rel="stylesheet" href="Estilos.css"> 
+</head>
+<body>
+    <aside class="sidebar">
+        <div class="logo">
+            <img src="LogoImagen.png" alt="Logo de Luisa Fernanda Soto">
+            <h2>Luisa Fernanda Soto</h2>
+        </div>
+        <ul class="links">
+            <h4>Menú principal</h4>
+            <li>
+                <span class="material-symbols-outlined">dashboard</span>
+                <a href="index.html" class="active">Inicio</a> 
+            </li>
+            <li>
+                <span class="material-symbols-outlined">person</span>
+                <a href="Sobremi.html">Sobre mí</a>
+            </li>
+            <li>
+                <span class="material-symbols-outlined">folder</span>
+                <a href="Portafolio.html">Portafolio</a>
+            </li>
+            <li>
+                <span class="material-symbols-outlined">show_chart</span>
+                <a href="Habilidades.html">Habilidades</a>
+            </li>
+            <li>
+                <span class="material-symbols-outlined">comment</span>
+                <a href="Reseñas.html">Reseñas</a>
+            </li>
+        </ul>
+    </aside>
+
+    <section class="hero-section" id="hero-background"> 
+        <div class="hero-overlay"> 
+            <p class="hero-frase">Diseño con alma, creo con intención y vivo inspirada por la belleza de los detalles.</p>
+            <a href="Portafolio.html" class="cta-btn">VER PORTAFOLIO</a> 
+        </div>
+    </section>
+
+    <!-- Añadí un pequeño código de javaScript para darle animación a la pantalla de inicio -->
+    <script>
+        const images = [
+            'fondo1.png',
+            'fondo2.png',
+            'fondo4.png'
+        ];
+
+        let index = 0;
+        const heroElement = document.getElementById('hero-background');
+
+        function changeBackground() {
+            heroElement.style.backgroundImage = `url(${images[index]})`;
+            index = (index + 1) % images.length;
+        }
+
+        changeBackground(); 
+    
+        setInterval(changeBackground, 5000); 
+    </script>
+
+</body>
+</html>

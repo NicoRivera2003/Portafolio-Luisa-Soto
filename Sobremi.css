@@ -1,0 +1,257 @@
+
+body {
+    background-color: burlywood; /* Color de fondo */
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fuente */
+    color: #333;
+}
+
+.header {
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding: 30px 0;
+    color: #4A2E1D;
+    background-color: #f5deb3;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 3.5em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+hr {
+    border: none;
+    border-top: 3px solid #D2B48C;
+    margin: 30px auto;
+    width: 70%;
+}
+
+.main-nav {
+    background-color: #8B4513;
+    padding: 15px 0;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    margin-bottom: 40px;
+}
+
+.main-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.main-nav li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.1em;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.main-nav li a:hover,
+.main-nav li a.active {
+    background-color: #A0522D;
+    color: white;
+}
+
+.section-title { /* Clase general para títulos de sección, ya debe estar definida */
+    text-align: center;
+    font-size: 3.2em;
+    margin-bottom: 70px;
+    color: #4A2E1D;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    position: relative;
+    display: inline-block;
+    left: 50%; /* Para centrar */
+    transform: translateX(-50%); /* Para centrar el inline-block */
+}
+
+.section-title::after { /* Subrayado para los títulos de sección */
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background-color: #D2B48C;
+    border-radius: 2px;
+}
+
+footer {
+    text-align: center;
+    padding: 30px;
+    background-color: #8B4513;
+    color: white;
+    font-size: 0.9em;
+    margin-top: 60px;
+    box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
+}
+
+
+.about-me-page-container {
+    max-width: 1000px; /* Ancho máximo para el contenido principal */
+    margin: 50px auto; /* Centra el contenedor y da margen superior */
+    padding: 40px;
+    background-color: #fff; /* Fondo blanco para el contenido */
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15); /* Sombra negra */
+    border-radius: 12px; /* Bordes redondeados */
+    min-height: 70vh; /* Altura mínima */
+    box-sizing: border-box;
+}
+
+.section-divider { /* Estilo para las líneas horizontales dentro de la sección Sobre Mí */
+    border: none;
+    border-top: 2px solid #e0e0e0; /* Línea más fina y clara */
+    margin: 50px auto; /* Espacio entre los bloques */
+    width: 80%; /* Ancho de la línea */
+}
+
+.about-block {
+    display: flex; /* Flexbox para organizar texto e imagen */
+    align-items: center; /* Alinea los elementos verticalmente en el centro */
+    justify-content: center; /* Centra el contenido si hay espacio extra */
+    gap: 60px; /* Espacio entre la imagen y el texto */
+    margin-bottom: 60px; /* Espacio debajo de cada bloque */
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan en pantallas pequeñas */
+}
+
+.about-block:last-of-type { /* No aplicar margen inferior al último bloque */
+    margin-bottom: 0;
+}
+
+.about-block.reverse-order { /* Clase para invertir el orden de los elementos */
+    flex-direction: row-reverse; /* La imagen va a la izquierda, texto a la derecha */
+}
+
+.about-text {
+    flex: 1; /* Permite que el texto crezca y ocupe espacio */
+    min-width: 300px; /* Ancho mínimo para el texto  */
+    padding: 0 20px; /* Padding interno para el texto */
+    box-sizing: border-box;
+}
+
+.about-text p {
+    font-size: 1.2em; /* Tamaño de fuente */
+    color: #555;
+    line-height: 1.7; /* Mayor espacio entre líneas */
+    text-align: justify;
+}
+
+.about-image {
+    flex: 1; /* Permite que la imagen crezca y ocupe espacio */
+    min-width: 250px; /* Ancho mínimo para la imagen  */
+    text-align: center; /* Centra la imagen dentro de su contenedor */
+}
+
+.about-image img {
+    max-width: 100%;
+    height: 300px; /* Altura fija para las imágenes */
+    object-fit: cover; /* Recorta la imagen para cubrir el área sin distorsionar */
+    border-radius: 50%; /* Hace las imágenes circulares */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1); /* Sombra atractiva */
+    border: 3px solid #D2B48C; /* Borde del color de la paleta */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición para hover */
+}
+
+.about-image img:hover {
+    transform: scale(1.05); /* Zoom al pasar el ratón */
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
+}
+
+/* Ajustes para pantallas de tablet y laptops pequeñas (Diseño responsivo) */
+@media (max-width: 992px) {
+    .about-me-page-container {
+        padding: 30px;
+    }
+    .section-title {
+        font-size: 2.8em;
+        margin-bottom: 60px;
+    }
+    .about-block {
+        gap: 40px;
+    }
+    .about-text p {
+        font-size: 1.15em;
+    }
+    .about-image img {
+        height: 250px; /* Ajusta altura de imagen */
+    }
+}
+
+/* Ajustes para pantallas de móvil */
+@media (max-width: 768px) {
+    .about-me-page-container {
+        padding: 20px;
+        margin: 30px auto;
+    }
+    .section-title {
+        font-size: 2.5em;
+        margin-bottom: 50px;
+    }
+    .about-block {
+        flex-direction: column; /* Texto e imagen verticalmente */
+        align-items: center; /* Centra los elementos apilados */
+        gap: 30px;
+        margin-bottom: 40px;
+    }
+    .about-block.reverse-order { /* Deshacer el reverse-order en móviles */
+        flex-direction: column;
+    }
+    .about-text {
+        padding: 0; /* Elimina el padding horizontal en móviles */
+        text-align: center; /* Centra el texto en móviles */
+    }
+    .about-text p {
+        font-size: 1.1em;
+        text-align: center; /* Centra el texto */
+    }
+    .about-image img {
+        height: 220px; /* Altura más pequeña para móviles */
+    }
+    .section-divider {
+        margin: 40px auto;
+    }
+}
+
+/* Ajustes para pantallas muy pequeñas */
+@media (max-width: 480px) {
+    .section-title {
+        font-size: 2em;
+        margin-bottom: 40px;
+    }
+    .about-text p {
+        font-size: 1em;
+    }
+    .about-image img {
+        height: 180px; /* Altura aún más pequeña */
+        border-width: 2px; /* Borde más fino */
+    }
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.social-icons a {
+    color: black;
+    margin: 0 10px;
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #d17f47; 
+}
