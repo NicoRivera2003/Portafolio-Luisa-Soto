@@ -24,6 +24,13 @@ body {
     letter-spacing: 2px;
 }
 
+.header-divider {
+    border: none;
+    border-top: 2px solid #D2B48C;
+    margin: 20px auto 0 auto;
+    width: 50%;
+}
+
 hr {
     border: none;
     border-top: 3px solid #D2B48C;
