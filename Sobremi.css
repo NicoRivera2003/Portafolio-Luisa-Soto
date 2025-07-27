@@ -227,31 +227,38 @@ footer {
 
 /*implementado 2*/
 @media (max-width: 768px) {
+    .main-nav {
+        width: 100%;
+        overflow-x: hidden; /* Evita que el menú se desborde horizontalmente */
+    }
+
     .main-nav ul {
+        display: flex;
         flex-direction: column;
-        gap: 10px;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        align-items: stretch; /* Asegura que las opciones llenen el ancho */
     }
 
-    .main-nav li a{
-        padding: 8px 15px;
-        font-size: 1em;
+    .main-nav li {
+        width: 100%;
+        margin: 0;
+        padding: 0;
     }
 
-    /*.main-nav a {
-       display: block;
-       width: 100%;
-       padding: 15px 0;
-       font-size: 1.2rem;
-       background-color: #8B4513;
-       color: white;
-       border-radius: 0;
-       border-bottom: 1px solid #a0602e;
-    } */
-
-    .main-nav a.active {
-       background-color: #a0602e;
+    .main-nav a {
+        display: block;
+        width: 100%;
+        padding: 12px 0;
+        text-align: center;
+        font-size: 1rem;
+        background-color: #8B4513;
+        color: white;
+        border-bottom: 1px solid #a0602e;
     }
 
+    .main-nav a.active,
     .main-nav a:hover {
         background-color: #a0602e;
     }

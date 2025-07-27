@@ -346,7 +346,7 @@ footer {
     }
     .main-nav ul { /* Menú vertical en móviles */
         flex-direction: column;
-        gap: 10px;
+        gap: 10px; 
     }
     .main-nav li a {
         padding: 8px 15px;
