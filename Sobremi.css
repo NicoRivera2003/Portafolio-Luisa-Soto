@@ -228,14 +228,46 @@ footer {
 /*implementado 2*/
 @media (max-width: 768px) {
     
+    body, html {
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+        box-sizing: border-box;
+    }
+
+    .main-nav {
+        width: 100%;
+        background-color: #8B4513;
+        text-align: center;
+        padding: 0;
+    }
+
     .main-nav ul {
+        display: flex;
         flex-direction: column;
-        gap: 10px;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+    }
+
+    .main-nav li {
+        list-style: none;
+        width: 100%;
     }
 
     .main-nav li a {
-        padding: 8px 15px;
-        font-size: 1em;
+        display: block;
+        padding: 12px 0;
+        font-size: 1rem;
+        color: white;
+        background-color: #8B4513;
+        border-bottom: 1px solid #a0602e;
+        text-decoration: none;
+    }
+
+    .main-nav li a:hover,
+    .main-nav li a.active {
+        background-color: #a0602e;
     }
 }
 
