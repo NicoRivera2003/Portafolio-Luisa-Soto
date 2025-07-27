@@ -142,7 +142,8 @@ footer {
     color: white;
     display: flex;
     align-items: center;
-    padding: 25px 10px 15px;
+    gap: 10px;
+    padding: 10px 0; /*25px 10px 15px;*/
     white-space: nowrap; /* Evita que el texto del logo se rompa */
 }
 
@@ -366,7 +367,7 @@ footer {
 
     .sidebar .logo { padding: 10px 0; }
     .logo h2 { display: block; margin-left: 10px; font-size: 1rem; } /* Siempre visible y más pequeño */
-    .sidebar:hover .logo h2 { display: block; } /* Asegurar que no cambie */
+    /*.sidebar:hover .logo h2 { display: block; } Asegurar que no cambie */
     .logo img { width: 35px; }
 
     .sidebar .links {
