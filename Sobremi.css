@@ -228,18 +228,14 @@ footer {
 /*implementado 2*/
 @media (max-width: 768px) {
     .main-nav ul {
-        display: flex;
         flex-direction: column;
-        gap: 0;
-        align-items: center;
-        padding: 0;
+        gap: 10px;
     }
 
     .main-nav li {
         width: 100%;
         text-align: center;
         margin: 5px 0;
-        overflow: hidden;
     }
 
     .main-nav a {
