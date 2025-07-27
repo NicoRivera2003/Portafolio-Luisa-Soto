@@ -232,13 +232,12 @@ footer {
         gap: 10px;
     }
 
-    .main-nav li {
-        width: 100%;
-        text-align: center;
-        margin: 5px 0;
+    .main-nav li a{
+        padding: 8px 15px;
+        font-size: 1em;
     }
 
-    .main-nav a {
+    /*.main-nav a {
        display: block;
        width: 100%;
        padding: 15px 0;
@@ -247,7 +246,7 @@ footer {
        color: white;
        border-radius: 0;
        border-bottom: 1px solid #a0602e;
-    }
+    } */
 
     .main-nav a.active {
        background-color: #a0602e;
